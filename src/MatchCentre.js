@@ -7,10 +7,10 @@ export default function MatchCentre() {
 
   useEffect(() => {
     fetch("https://cors-anywhere-eight-zeta.vercel.app/https://api.football-data.org/v4/teams/64/matches", {
-      headers: {
-        "X-Auth-Token": "38f5562099f941b1b877e394b722d199"
-      }
-    })
+        headers: {
+          "X-Auth-Token": "38f5562099f941b1b877e394b722d199"
+        }
+      })
       .then(res => res.json())
       .then(data => setMatches(data.matches || []))
       .catch(err => console.error("Error fetching match data:", err));

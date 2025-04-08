@@ -1,18 +1,21 @@
-// src/Fixtures.js
 import React, { useEffect, useState } from "react";
 
 export default function Fixtures() {
   const [fixtures, setFixtures] = useState([]);
 
   useEffect(() => {
-    fetch("https://cors-anywhere-eight-zeta.vercel.app/https:/api.football-data.org/v4/teams/64/matches", {
+    const proxy = "https://cors-anywhere-eight-zeta.vercel.app/";
+    const api = "https://api.football-data.org/v4/teams/64/matches";
+    const url = proxy + api;
+
+    fetch(url, {
       headers: {
-        "X-Auth-Token": "38f5562099f941b1b877e394b722d199"
+        "X-Auth-Token": "38f5562099f9411bb877e394b722d199"
       }
     })
       .then((res) => res.json())
       .then((data) => setFixtures(data.matches || []))
-      .catch((err) => console.error("Error fetching fixtures:", err));
+      .catch((err) => console.error("Error fetching fixtures", err));
   }, []);
 
   return (
