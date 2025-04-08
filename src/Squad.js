@@ -5,7 +5,8 @@ export default function Squad() {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/https://api.football-data.org/v4/teams/64", {
+    fetch("https://cors-anywhere-kero.vercel.app/https://api.football-data.org/v4/teams/64", {
+
       headers: {
         "X-Auth-Token": "38f5562099f941b1b877e394b722d199"
       }
