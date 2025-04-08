@@ -26,7 +26,10 @@ function Home() {
       </div>
       <h2 className="text-xl font-semibold mt-4">Subscribe to Our Newsletter</h2>
       <input placeholder="Enter your email" /> <button>Subscribe</button>
-      <footer className="mt-6 text-sm text-gray-500">© 2025 Liverpoolista. YNWA.</footer>
+      <footer className="mt-6 text-sm text-gray-500">
+  © 2025 Liverpoolista. YNWA. <br />
+  <span className="text-xs italic">by Kerollos Nakhla</span>
+</footer>
     </div>
   );
 }
