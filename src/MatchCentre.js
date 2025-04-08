@@ -6,7 +6,7 @@ export default function MatchCentre() {
   const [activeTab, setActiveTab] = useState("LIVE");
 
   useEffect(() => {
-    fetch("https://cors-anywhere-eight-zeta.vercel.app/api.football-data.org/v4/teams/64/matches", {
+    fetch("https://cors-anywhere-eight-zeta.vercel.app/https://api.football-data.org/v4/teams/64/matches", {
       headers: {
         "X-Auth-Token": "38f5562099f941b1b877e394b722d199"
       }
